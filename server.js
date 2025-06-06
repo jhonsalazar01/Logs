@@ -6,7 +6,9 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 // Tu URI de conexión a MongoDB Atlas
-const MONGO_URI = 'mongodb+srv://jhonsalazar01:gYNE3RqRJfNpRi0y@final.0ux8x.mongodb.net/?retryWrites=true&w=majority&appName=Final';
+//const MONGO_URI = 'mongodb+srv://jhonsalazar01:gYNE3RqRJfNpRi0y@final.0ux8x.mongodb.net/?retryWrites=true&w=majority&appName=Final';
+const MONGO_URI = 'mongodb+srv://jhonjaime01:OMeskcYw2i02ci8S@cluster0.xm8oev9.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
+
 
 app.use(cors());
 app.use(express.json());
