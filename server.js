@@ -32,7 +32,8 @@ const Log = mongoose.model('logs', logSchema); // La colección será "logs"
 app.post('/logs', async (req, res) => {
   try {
     const { correo, accion } = req.body;
-    const ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
+   const ip = (req.headers['x-forwarded-for'] || req.connection.remoteAddress).split(',')[0].trim();
+
 
     const nuevoLog = new Log({ ip, correo, accion });
     await nuevoLog.save();
